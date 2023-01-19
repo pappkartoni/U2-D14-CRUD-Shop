@@ -17,11 +17,12 @@ const getAllProducts = async () => {
 
 const renderAllProducts = (products) => {
     const ul = document.querySelector("ul.list-group")
-    ul.innerHTML = ""
-    if (products) {
+    ul.innerHTML = "";
+    if (products.length > 0) {
         products.forEach(renderProduct) 
     } else {
-        ul.innerHTML = `<li class="list-group-item w-50 mb-4>Shop is empty</li>`
+        const stuff = '<li class="list-group-item">Shop is empty</li>'
+        ul.innerHTML += stuff
     }
 }
 const renderProduct = (product) => {
