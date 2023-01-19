@@ -3,7 +3,7 @@ const id = new URLSearchParams(location.search).get("id")
 const url = id ? "https://striveschool-api.herokuapp.com/api/product/" + id : "https://striveschool-api.herokuapp.com/api/product/";
 const method = id ? "PUT" : "POST"
 let ev 
-const handleBackOffice = async (event) => {
+const handleBackOffice = async () => {
     try {
         const productToSend = {
             name: document.querySelector("#productName").value,
